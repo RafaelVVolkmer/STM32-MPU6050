@@ -389,8 +389,6 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
     }
 
     MPU6050_sensorUpdate(&sensor, &last);
-    if (ret != 0)
-      goto err;
 
     PROFILE_STOP(isr_time_us);
 
